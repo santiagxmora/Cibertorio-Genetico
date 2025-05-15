@@ -1,87 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cibertorio Genético - Tecnologías</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cibertorio Genético - Tecnologías</title>
 
-<!-- Favicon -->
-<link rel="icon" href="Logo Cibertorio.png" type="image/png" />
+  <!-- Favicon -->
+  <link rel="icon" href="Logo Cibertorio.png" type="image/png" />
 
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin:0; background:#e8f0f8; color:#0b3d91;
-  }
-  header, nav, footer {
-    background:#0b3d91; color:#fff; padding:15px 25px;
-  }
-  header h1 {
-    margin:0; font-weight:700;
-  }
-  nav {
-    display:flex; gap:15px; justify-content:center;
-  }
-  nav a {
-    color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
-    background:#1250c8;
-    transition: background 0.3s;
-  }
-  nav a:hover, nav a.active {
-    background:#083170;
-  }
-  main {
-    max-width:900px;
-    margin: 30px auto;
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 12px #b1c8f7;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-  }
-  th, td {
-    border: 1px solid #0b3d91;
-    padding: 12px 15px;
-    text-align: left;
-    vertical-align: top;
-  }
-  th {
-    background-color: #0b3d91;
-    color: white;
-  }
-  tr:nth-child(even) {
-    background-color: #f0f7ff;
-  }
-  /* Explicación debajo de la tabla */
-  .explicacion {
-    margin-top: 25px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #0b3d91;
-  }
-  .explicacion strong {
-    color: #083170;
-  }
-  /* Enlaces para fuentes */
-  a.link-info {
-    color: #1250c8;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  a.link-info:hover {
-    color: #083170;
-  }
-  /* Estilo para imágenes en tabla */
-  .tech-img {
-    max-width: 120px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-</style>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin:0; background:#e8f0f8; color:#0b3d91;
+    }
+    header, nav {
+      background:#0b3d91; color:#fff; padding:15px 25px;
+    }
+    header h1 {
+      margin:0; font-weight:700;
+    }
+    nav {
+      display:flex; gap:15px; justify-content:center;
+    }
+    nav a {
+      color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
+      background:#1250c8;
+      transition: background 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background:#083170;
+    }
+    main {
+      max-width:900px;
+      margin: 30px auto;
+      background:#fff;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 0 12px #b1c8f7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+    th, td {
+      border: 1px solid #0b3d91;
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #0b3d91;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f0f7ff;
+    }
+    .explicacion {
+      margin-top: 25px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #0b3d91;
+    }
+    .explicacion strong {
+      color: #083170;
+    }
+    a.link-info {
+      color: #1250c8;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    a.link-info:hover {
+      color: #083170;
+    }
+  </style>
 </head>
 <body>
 
@@ -93,54 +85,53 @@
   <a href="index.html">Inicio</a>
   <a href="patologias.html">Patologías</a>
   <a href="tecnologias.html" class="active">Tecnologías</a>
-  <a href="recursos.html">Recursos</a>
 </nav>
 
 <main>
   <h2>Métodos de Secuenciación y Aplicaciones</h2>
+
   <table>
     <thead>
       <tr>
         <th>Metodología</th>
         <th>Principio</th>
         <th>Enfermedad Asociada</th>
-        <th>Imagen</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><strong>Sanger</strong></td>
-        <td>Secuenciación mediante terminación selectiva con nucleótidos fluorescentes que permiten leer fragmentos cortos.</td>
+        <td>Secuenciación por terminación selectiva con nucleótidos fluorescentes. Ideal para secuencias cortas y mutaciones puntuales.</td>
         <td>Fibrosis Quística</td>
-        <td><img src="sanger.jpg" alt="Secuenciación Sanger" class="tech-img" /></td>
       </tr>
       <tr>
         <td><strong>NGS (Illumina / Ion Torrent)</strong></td>
-        <td>Secuenciación masiva paralela que permite obtener millones de fragmentos cortos simultáneamente para análisis profundo.</td>
+        <td>Secuenciación masiva en paralelo que permite leer millones de fragmentos cortos simultáneamente. Requiere bioinformática avanzada.</td>
         <td>Cáncer de mama (mutaciones BRCA1/2)</td>
-        <td><img src="ngs.jpg" alt="Secuenciación NGS" class="tech-img" /></td>
       </tr>
       <tr>
-        <td><strong>Tercera generación (PacBio / ONT)</strong></td>
-        <td>Lectura de moléculas largas en tiempo real, lo que facilita detectar grandes reordenamientos y mutaciones complejas.</td>
+        <td><strong>Tercera generación (PacBio / Nanopore)</strong></td>
+        <td>Lectura de moléculas individuales largas en tiempo real. Detecta variaciones estructurales y repeticiones.</td>
         <td>Distrofia muscular de Duchenne</td>
-        <td><img src="pacbio_ont.jpg" alt="Secuenciación tercera generación" class="tech-img" /></td>
       </tr>
       <tr>
-        <td><strong>Métodos Híbridos</strong></td>
-        <td>Combinan lecturas cortas y largas para mejorar precisión y cobertura, usadas en enfermedades con mutaciones difíciles de detectar.</td>
+        <td><strong>Métodos híbridos</strong></td>
+        <td>Combinación de lecturas cortas y largas para mayor precisión. Útiles en regiones difíciles como repeticiones expansibles.</td>
         <td>Síndrome de X Frágil</td>
-        <td><img src="metodos_hibridos.jpg" alt="Métodos Híbridos de secuenciación" class="tech-img" /></td>
       </tr>
     </tbody>
   </table>
 
   <div class="explicacion">
-    <p><strong>Sanger:</strong> Es la técnica clásica y aún estándar para secuenciación precisa de fragmentos pequeños. Muy usada para diagnosticar mutaciones puntuales conocidas.</p>
-    <p><strong>NGS (Next-Generation Sequencing):</strong> Ha revolucionado la genética al permitir secuenciar exomas o genomas completos rápidamente. Fundamental en oncología y genética médica.</p>
-    <p><strong>Tercera generación:</strong> Técnicas como PacBio o Nanopore (ONT) leen fragmentos mucho más largos, lo que es útil para detectar duplicaciones, deleciones y repeticiones asociadas a enfermedades genéticas complejas.</p>
-    <p><strong>Métodos híbridos:</strong> La combinación de tecnologías optimiza la calidad y facilita la resolución de regiones genómicas difíciles, como las repeticiones en el Síndrome de X Frágil.</p>
-    <p>Para profundizar en estas tecnologías, puedes visitar: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6219406/" target="_blank" rel="noopener" class="link-info">Revisión NCBI sobre tecnologías de secuenciación</a>.</p>
+    <p><strong>Sanger:</strong> Técnica clásica y confiable usada para confirmar variantes. Utiliza didesoxinucleótidos marcados que interrumpen la síntesis del ADN en puntos específicos.</p>
+
+    <p><strong>NGS:</strong> Revolucionó el diagnóstico molecular. Puede cubrir todo el exoma o genoma. Su precisión depende del análisis bioinformático posterior.</p>
+
+    <p><strong>PacBio / Nanopore:</strong> Útiles para leer regiones largas, como genes con muchas repeticiones o mutaciones estructurales. Menor precisión en lectura base a base, pero más completa en arquitectura genómica.</p>
+
+    <p><strong>Híbridos:</strong> Usan la velocidad y economía de NGS con la potencia de lectura larga de tercera generación. Es la opción ideal para enfermedades genéticas complejas.</p>
+
+    <p>Lee más en: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6219406/" target="_blank" rel="noopener" class="link-info">Revisión de tecnologías de secuenciación - NCBI</a></p>
   </div>
 </main>
 
