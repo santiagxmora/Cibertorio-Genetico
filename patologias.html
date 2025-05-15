@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cibertorio Genético - Patologías</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; background:#e8f0f8; color:#0b3d91;
+  }
+  header, nav, footer {
+    background:#0b3d91; color:#fff; padding:15px 25px;
+  }
+  header h1 {
+    margin:0; font-weight:700;
+  }
+  nav {
+    display:flex; gap:15px; justify-content:center;
+  }
+  nav a {
+    color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
+    background:#1250c8;
+    transition: background 0.3s;
+  }
+  nav a:hover, nav a.active {
+    background:#083170;
+  }
+  main {
+    max-width:900px;
+    margin: 30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px #b1c8f7;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  .patologia {
+    margin-bottom: 20px;
+    border-left: 6px solid #0b3d91;
+    padding-left: 15px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cibertorio Genético Interactivo – Grupo 1 Medicina</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="patologias.html" class="active">Patologías</a>
+  <a href="tecnologias.html">Tecnologías</a>
+  <a href="recursos.html">Recursos</a>
+</nav>
+
+<main>
+  <h2>Patologías Asociadas</h2>
+
+  <div class="patologia">
+    <h3>Esclerosis Lateral Amiotrófica (ELA)</h3>
+    <p>Enfermedad neurodegenerativa que afecta motoneuronas. Asociada con mutaciones en genes como <strong>SOD1</strong> que alteran la transcripción y el plegamiento proteico.</p>
+  </div>
+
+  <div class="patologia">
+    <h3>Hemofilia</h3>
+    <p>Trastorno hereditario ligado al cromosoma X causado por mutaciones en los genes <strong>F8</strong> o <strong>F9</strong>, que afectan la coagulación sanguínea.</p>
+  </div>
+
+  <div class="patologia">
+    <h3>Fibrosis Quística</h3>
+    <p>Enfermedad causada por mutaciones en el gen <strong>CFTR</strong>, detectables mediante secuenciación Sanger, que generan problemas respiratorios y digestivos.</p>
+  </div>
+
+  <div class="patologia">
+    <h3>Cáncer de Mama (BRCA1/2)</h3>
+    <p>Mutaciones en genes BRCA1 y BRCA2 aumentan el riesgo de cáncer de mama hereditario, detectables mediante tecnologías NGS.</p>
+  </div>
+
+  <div class="patologia">
+    <h3>Distrofia Muscular de Duchenne</h3>
+    <p>Enfermedad muscular causada por deleciones en el gen <strong>DMD</strong>. Se analizan con secuenciación de tercera generación por sus grandes variaciones estructurales.</p>
+  </div>
+
+  <div class="patologia">
+    <h3>Síndrome de X Frágil</h3>
+    <p>Trastorno neurodesarrollativo causado por expansiones repetidas CGG en el gen <strong>FMR1</strong>, detectables con métodos híbridos de secuenciación.</p>
+  </div>
+</main>
+
+</body>
+</html>

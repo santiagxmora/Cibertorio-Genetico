@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cibertorio Genético - Tecnologías</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; background:#e8f0f8; color:#0b3d91;
+  }
+  header, nav, footer {
+    background:#0b3d91; color:#fff; padding:15px 25px;
+  }
+  header h1 {
+    margin:0; font-weight:700;
+  }
+  nav {
+    display:flex; gap:15px; justify-content:center;
+  }
+  nav a {
+    color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
+    background:#1250c8;
+    transition: background 0.3s;
+  }
+  nav a:hover, nav a.active {
+    background:#083170;
+  }
+  main {
+    max-width:900px;
+    margin: 30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px #b1c8f7;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+  th, td {
+    border: 1px solid #0b3d91;
+    padding: 12px 15px;
+    text-align: left;
+  }
+  th {
+    background-color: #0b3d91;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f0f7ff;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cibertorio Genético Interactivo – Grupo 1 Medicina</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="patologias.html">Patologías</a>
+  <a href="tecnologias.html" class="active">Tecnologías</a>
+  <a href="recursos.html">Recursos</a>
+</nav>
+
+<main>
+  <h2>Métodos de Secuenciación y Aplicaciones</h2>
+  <table>
+    <thead>
+      <tr><th>Metodología</th><th>Principio</th><th>Enfermedad Asociada</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sanger</td><td>Terminación con nucleótidos marcados fluorescentes</td><td>Fibrosis Quística</td></tr>
+      <tr><td>NGS (Illumina / Ion Torrent)</td><td>Lectura masiva paralela</td><td>Cáncer de mama (BRCA1/2)</td></tr>
+      <tr><td>3ra Generación (PacBio / ONT)</td><td>Lectura larga de moléculas individuales</td><td>Distrofia muscular de Duchenne</td></tr>
+      <tr><td>Métodos Híbridos</td><td>Combinación de lecturas cortas y largas</td><td>Síndrome de X Frágil</td></tr>
+    </tbody>
+  </table>
+</main>
+
+</body>
+</html>

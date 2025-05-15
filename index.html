@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cibertorio Genético - Inicio</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; background:#e8f0f8; color:#0b3d91;
+  }
+  header, nav, footer {
+    background:#0b3d91; color:#fff; padding:15px 25px;
+  }
+  header h1 {
+    margin:0; font-weight:700;
+  }
+  nav {
+    display:flex; gap:15px; justify-content:center;
+  }
+  nav a {
+    color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
+    background:#1250c8;
+    transition: background 0.3s;
+  }
+  nav a:hover, nav a.active {
+    background:#083170;
+  }
+  main {
+    max-width:900px;
+    margin: 30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px #b1c8f7;
+  }
+  label {
+    font-weight:600;
+  }
+  textarea {
+    width:100%;
+    height:80px;
+    font-family: monospace;
+    font-size:16px;
+    margin:10px 0 20px;
+    padding:10px;
+    border-radius:8px;
+    border: 2px solid #0b3d91;
+    resize: vertical;
+  }
+  button.action-btn {
+    background:#0b3d91; color:#fff; border:none;
+    padding:10px 20px; border-radius:8px;
+    font-weight:600; cursor:pointer; margin-right:10px;
+    transition: background 0.3s ease;
+  }
+  button.action-btn:hover {
+    background:#083170;
+  }
+  .output-area {
+    margin-top:15px;
+  }
+  .detected {
+    background:#d6f1d6;
+    border-left:6px solid #2c7a2c;
+    padding:15px;
+    margin-top:25px;
+    font-weight:700;
+    color:#2c7a2c;
+    border-radius:6px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cibertorio Genético Interactivo – Grupo 1 Medicina</h1>
+</header>
+
+<nav>
+  <a href="index.html" class="active">Inicio</a>
+  <a href="patologias.html">Patologías</a>
+  <a href="tecnologias.html">Tecnologías</a>
+  <a href="recursos.html">Recursos</a>
+</nav>
+
+<main>
+  <h2>Transcripción y Traducción</h2>
+  <label for="dnaInput">Secuencia de DNA:</label>
+  <textarea id="dnaInput" placeholder="Solo A,T,C,G..."></textarea>
+
+  <div>
+    <button class="action-btn" onclick="transcribir()">Transcribir</button>
+    <button class="action-btn" onclick="transcripcionInversa()">Transcripción Inversa</button>
+    <button class="action-btn" onclick="borrarTodo()">Borrar</button>
+  </div>
+
+  <div class="output-area">
+    <label for="rnaOutput">Secuencia de RNA:</label>
+    <textarea id="rnaOutput" readonly></textarea>
+  </div>
+
+  <div class="output-area">
+    <label for="proteinOutput">Secuencia de Proteína:</label>
+    <textarea id="proteinOutput" readonly></textarea>
+  </div>
+
+  <div style="margin-top:10px;">
+    <label><input type="checkbox" id="detectStartCodon"> Detectar codón de inicio (AUG)</label>
+    <label><input type="checkbox" id="detectStopCodon"> Detectar codón de terminación</label>
+    <button class="action-btn" onclick="traducir()">Traducir</button>
+  </div>
+
+  <div id="diseaseDetected" class="detected" style="display:none;"></div>
+</main>
+
+<script>
+  function transcribir() {
+    let dna = document.getElementById("dnaInput").value.toUpperCase();
+    dna = dna.replace(/[^ATCG]/g, "");
+    document.getElementById("dnaInput").value = dna;
+    const rna = dna.replace(/T/g, "U");
+    document.getElementById("rnaOutput").value = rna;
+    document.getElementById("proteinOutput").value = "";
+    detectarMutacion(dna);
+  }
+
+  function transcripcionInversa() {
+    let rna = document.getElementById("rnaOutput").value.toUpperCase();
+    rna = rna.replace(/[^AUCG]/g, "");
+    const dna = rna.replace(/U/g, "T");
+    document.getElementById("dnaInput").value = dna;
+    document.getElementById("proteinOutput").value = "";
+  }
+
+  function traducir() {
+    const codonTabla = {
+      UUU:"F", UUC:"F", UUA:"L", UUG:"L", CUU:"L", CUC:"L", CUA:"L", CUG:"L",
+      AUU:"I", AUC:"I", AUA:"I", AUG:"M", GUU:"V", GUC:"V", GUA:"V", GUG:"V",
+      UCU:"S", UCC:"S", UCA:"S", UCG:"S", CCU:"P", CCC:"P", CCA:"P", CCG:"P",
+      ACU:"T", ACC:"T", ACA:"T", ACG:"T", GCU:"A", GCC:"A", GCA:"A", GCG:"A",
+      UAU:"Y", UAC:"Y", UAA:"*", UAG:"*", CAU:"H", CAC:"H", CAA:"Q", CAG:"Q",
+      AAU:"N", AAC:"N", AAA:"K", AAG:"K", GAU:"D", GAC:"D", GAA:"E", GAG:"E",
+      UGU:"C", UGC:"C", UGA:"*", UGG:"W", CGU:"R", CGC:"R", CGA:"R", CGG:"R",
+      AGU:"S", AGC:"S", AGA:"R", AGG:"R", GGU:"G", GGC:"G", GGA:"G", GGG:"G"
+    };
+    const rna = document.getElementById("rnaOutput").value.toUpperCase();
+    if (!rna) {
+      alert("Primero genera la secuencia de RNA");
+      return;
+    }
+    let start = 0;
+    if (document.getElementById("detectStartCodon").checked) {
+      start = rna.indexOf("AUG");
+      if (start === -1) {
+        alert("No se encontró codón de inicio (AUG)");
+        return;
+      }
+    }
+    let protein = "";
+    for (let i = start; i < rna.length - 2; i += 3) {
+      const codon = rna.substr(i,3);
+      const aa = codonTabla[codon] || "?";
+      if (document.getElementById("detectStopCodon").checked && aa === "*") break;
+      protein += aa;
+    }
+    document.getElementById("proteinOutput").value = protein;
+  }
+
+  function borrarTodo() {
+    document.getElementById("dnaInput").value = "";
+    document.getElementById("rnaOutput").value = "";
+    document.getElementById("proteinOutput").value = "";
+    document.getElementById("diseaseDetected").style.display = "none";
+  }
+
+  function detectarMutacion(seq) {
+    const diseases = {
+      "GTG": "Anemia Falciforme (Hemoglobina S)",
+      "GAGTTC": "ELA (mutación en SOD1)",
+      "GTTGGC": "Fibrosis Quística (mutación deltaF508 en CFTR)",
+      "ATGTTT": "Hemofilia A (mutación en F8)",
+      "TTTGTG": "Cáncer de mama (mutaciones en BRCA1/2)",
+      "CAGCAGCAG": "Síndrome de X Frágil (repeticiones CGG en FMR1)",
+      "GCTGCT": "Distrofia Muscular de Duchenne (deleciones en DMD)"
+    };
+    let detectedMsg = "";
+    for (const mut in diseases) {
+      if (seq.includes(mut)) {
+        detectedMsg = `<strong>Mutación detectada:</strong> ${diseases[mut]}`;
+        break;
+      }
+    }
+    const disp = detectedMsg ? "block" : "none";
+    const elem = document.getElementById("diseaseDetected");
+    elem.style.display = disp;
+    elem.innerHTML = detectedMsg;
+  }
+</script>
+
+</body>
+</html>
