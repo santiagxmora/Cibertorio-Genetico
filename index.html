@@ -4,91 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cibertorio Genético - Inicio</title>
-
-  <!-- Favicon -->
   <link rel="icon" href="Logo Cibertorio.png" type="image/png" />
 
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #e8f0f8;
-      color: #0b3d91;
+      margin:0; background:#e8f0f8; color:#0b3d91;
     }
-    header, nav {
-      background: #0b3d91;
-      color: #fff;
-      padding: 15px 25px;
+    header, nav, footer {
+      background:#0b3d91; color:#fff; padding:15px 25px;
     }
     header h1 {
-      margin: 0;
-      font-weight: 700;
+      margin:0; font-weight:700;
     }
     nav {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
+      display:flex; gap:15px; justify-content:center;
     }
     nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 5px;
-      background: #1250c8;
+      color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
+      background:#1250c8;
       transition: background 0.3s;
     }
-    nav a:hover,
-    nav a.active {
-      background: #083170;
+    nav a:hover, nav a.active {
+      background:#083170;
     }
     main {
-      max-width: 900px;
+      max-width:900px;
       margin: 30px auto;
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px #b1c8f7;
+      background:#fff;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 0 12px #b1c8f7;
     }
     label {
-      font-weight: 600;
+      font-weight:600;
     }
     textarea {
-      width: 100%;
-      height: 80px;
+      width:100%;
+      height:80px;
       font-family: monospace;
-      font-size: 16px;
-      margin: 10px 0 20px;
-      padding: 10px;
-      border-radius: 8px;
+      font-size:16px;
+      margin:10px 0 20px;
+      padding:10px;
+      border-radius:8px;
       border: 2px solid #0b3d91;
       resize: vertical;
     }
     button.action-btn {
-      background: #0b3d91;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-right: 10px;
+      background:#0b3d91; color:#fff; border:none;
+      padding:10px 20px; border-radius:8px;
+      font-weight:600; cursor:pointer; margin-right:10px;
       transition: background 0.3s ease;
     }
     button.action-btn:hover {
-      background: #083170;
+      background:#083170;
     }
     .output-area {
-      margin-top: 15px;
+      margin-top:15px;
     }
     .detected {
-      background: #d6f1d6;
-      border-left: 6px solid #2c7a2c;
-      padding: 15px;
-      margin-top: 25px;
-      font-weight: 700;
-      color: #2c7a2c;
-      border-radius: 6px;
+      background:#d6f1d6;
+      border-left:6px solid #2c7a2c;
+      padding:15px;
+      margin-top:25px;
+      font-weight:700;
+      color:#2c7a2c;
+      border-radius:6px;
     }
   </style>
 </head>
@@ -102,11 +83,11 @@
   <a href="index.html" class="active">Inicio</a>
   <a href="patologias.html">Patologías</a>
   <a href="tecnologias.html">Tecnologías</a>
+  <a href="recursos.html">Recursos</a>
 </nav>
 
 <main>
   <h2>Transcripción y Traducción</h2>
-
   <label for="dnaInput">Secuencia de DNA:</label>
   <textarea id="dnaInput" placeholder="Solo A,T,C,G..."></textarea>
 
@@ -126,13 +107,35 @@
     <textarea id="proteinOutput" readonly></textarea>
   </div>
 
-  <div style="margin-top: 10px;">
+  <div style="margin-top:10px;">
     <label><input type="checkbox" id="detectStartCodon"> Detectar codón de inicio (AUG)</label>
     <label><input type="checkbox" id="detectStopCodon"> Detectar codón de terminación</label>
     <button class="action-btn" onclick="traducir()">Traducir</button>
   </div>
 
-  <div id="diseaseDetected" class="detected" style="display: none;"></div>
+  <div id="diseaseDetected" class="detected" style="display:none;"></div>
+
+  <!-- Nueva sección educativa al final -->
+  <section style="margin-top: 50px;">
+    <h2>Flujo de la Información Genética</h2>
+    <p>El <strong>dogma central de la biología molecular</strong> explica cómo la información contenida en el ADN se convierte en proteínas funcionales a través de dos procesos esenciales:</p>
+
+    <h3 style="margin-top: 20px;">1. Transcripción (ADN → ARN)</h3>
+    <p>Durante la transcripción, una enzima llamada ARN polimerasa lee la cadena de ADN y sintetiza una molécula de ARN mensajero (ARNm) complementaria. Este ARNm transporta la información genética desde el núcleo hacia el citoplasma.</p>
+
+    <h3 style="margin-top: 20px;">2. Traducción (ARN → Proteína)</h3>
+    <p>En la traducción, el ARNm se une al ribosoma y se lee en codones (grupos de tres nucleótidos). Cada codón se traduce en un aminoácido específico gracias a la acción del ARN de transferencia (ARNt), formando una cadena de aminoácidos que se pliega hasta convertirse en una proteína funcional.</p>
+
+    <h3 style="margin-top: 20px;">Resumen del proceso:</h3>
+    <ul style="padding-left: 20px;">
+      <li><strong>ADN</strong>: almacena la información genética</li>
+      <li><strong>Transcripción</strong> → se produce ARN mensajero</li>
+      <li><strong>Traducción</strong> → se produce una proteína funcional</li>
+    </ul>
+
+    <!-- Imagen opcional -->
+    <!-- <img src="flujo_genetico.png" alt="Esquema flujo genético" style="max-width: 100%; border-radius: 10px; margin-top: 15px;" /> -->
+  </section>
 </main>
 
 <script>
@@ -181,7 +184,7 @@
     }
     let protein = "";
     for (let i = start; i < rna.length - 2; i += 3) {
-      const codon = rna.substr(i, 3);
+      const codon = rna.substr(i,3);
       const aa = codonTabla[codon] || "?";
       if (document.getElementById("detectStopCodon").checked && aa === "*") break;
       protein += aa;
@@ -207,13 +210,11 @@
       "GCTGCT": "Distrofia Muscular de Duchenne (deleciones en DMD)"
     };
     const detectedList = [];
-
     for (const mut in diseases) {
       if (seq.includes(mut)) {
         detectedList.push(diseases[mut]);
       }
     }
-
     const elem = document.getElementById("diseaseDetected");
     if (detectedList.length > 0) {
       elem.style.display = "block";
