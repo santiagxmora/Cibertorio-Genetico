@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cibertorio Genético - Patologías Ampliado</title>
+<title>Cibertorio Genético - Patologías Detallado</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,10 +36,10 @@
   }
   h2 {
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   .patologia {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     border-left: 6px solid #0b3d91;
     padding-left: 20px;
   }
@@ -47,27 +47,40 @@
     margin-top: 0;
     color: #0b3d91;
   }
+  .section-title {
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #144a8f;
+  }
+  p, ul {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  ul {
+    padding-left: 20px;
+  }
   .mutaciones {
-    margin-top: 10px;
     background: #f0f7ff;
-    padding: 10px 15px;
-    border-radius: 6px;
+    padding: 15px 20px;
+    border-radius: 7px;
+    margin-top: 10px;
   }
   .mutaciones ul {
     margin: 0;
-    padding-left: 20px;
   }
   .mutaciones li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
-  .link-info {
+  a.link-info {
     display: inline-block;
     margin-top: 8px;
     color: #1250c8;
     text-decoration: underline;
     cursor: pointer;
   }
-  .link-info:hover {
+  a.link-info:hover {
     color: #083170;
   }
 </style>
@@ -86,16 +99,19 @@
 </nav>
 
 <main>
-  <h2>Patologías Genéticas y Mutaciones Asociadas</h2>
+  <h2>Patologías Genéticas: Clínica y Genética Profunda</h2>
 
   <div class="patologia">
     <h3>Esclerosis Lateral Amiotrófica (ELA)</h3>
-    <p>Enfermedad neurodegenerativa progresiva que afecta las neuronas motoras, causando debilidad muscular y atrofia. Algunas mutaciones en el gen <strong>SOD1</strong> están implicadas en la forma familiar de la enfermedad.</p>
+    <p class="section-title">Descripción clínica</p>
+    <p>La ELA es una enfermedad neurodegenerativa progresiva que afecta las neuronas motoras superiores e inferiores. Clínicamente se manifiesta con debilidad muscular, atrofia, fasciculaciones y espasticidad. La mayoría de los pacientes fallecen a los 3-5 años del diagnóstico debido a insuficiencia respiratoria.</p>
+    <p class="section-title">Genética y mutaciones</p>
+    <p>Una proporción significativa de los casos familiares está asociada a mutaciones en el gen <strong>SOD1</strong>, que codifica la superóxido dismutasa 1, una enzima antioxidante. Estas mutaciones generan proteínas mal plegadas que forman agregados tóxicos, dañando las neuronas motoras.</p>
     <div class="mutaciones">
-      <strong>Mutaciones conocidas:</strong>
+      <strong>Mutaciones relevantes:</strong>
       <ul>
-        <li><em>GAGTTC</em>: Mutación común en el exón 2 del gen SOD1.</li>
-        <li><em>A4V</em>: Variante que causa inicio rápido y severo.</li>
+        <li><em>GAGTTC</em>: mutación puntual en exón 2 que altera la actividad antioxidante.</li>
+        <li><em>A4V</em>: variante que induce plegamiento anómalo y toxicidad acelerada.</li>
       </ul>
     </div>
     <a class="link-info" href="https://www.ncbi.nlm.nih.gov/books/NBK13448/" target="_blank" rel="noopener">Más información NIH</a>
@@ -103,12 +119,15 @@
 
   <div class="patologia">
     <h3>Hemofilia A</h3>
-    <p>Trastorno hemorrágico hereditario causado por la deficiencia del factor VIII de coagulación. Generalmente ligado al cromosoma X con mutaciones en el gen <strong>F8</strong>.</p>
+    <p class="section-title">Descripción clínica</p>
+    <p>Trastorno hemorrágico caracterizado por deficiencia del factor VIII. Presenta sangrados prolongados, hemartrosis, hematomas extensos y riesgo de hemorragias internas. Se hereda en patrón ligado al cromosoma X, afectando principalmente a varones.</p>
+    <p class="section-title">Genética y mutaciones</p>
+    <p>Las mutaciones en el gen <strong>F8</strong> pueden ser grandes inversiones, deleciones o mutaciones puntuales que resultan en la ausencia o deficiencia del factor VIII funcional.</p>
     <div class="mutaciones">
-      <strong>Mutaciones frecuentes:</strong>
+      <strong>Mutaciones comunes:</strong>
       <ul>
-        <li><em>Inversiones intrónicas</em>: mutaciones que afectan la producción del factor VIII.</li>
-        <li><em>ATGTTT</em>: Cambio puntual asociado a la forma grave.</li>
+        <li>Inversiones intrónicas (intron 22 e intron 1): causa más frecuente.</li>
+        <li><em>ATGTTT</em>: mutación puntual asociada a formas severas.</li>
       </ul>
     </div>
     <a class="link-info" href="https://www.hemophilia.org/Bleeding-Disorders/Types-of-Bleeding-Disorders/Hemophilia-A" target="_blank" rel="noopener">Más información Hemofilia</a>
@@ -116,12 +135,15 @@
 
   <div class="patologia">
     <h3>Fibrosis Quística</h3>
-    <p>Enfermedad autosómica recesiva causada por mutaciones en el gen <strong>CFTR</strong>. Provoca disfunción en las glándulas exocrinas, afectando pulmones y sistema digestivo.</p>
+    <p class="section-title">Descripción clínica</p>
+    <p>Enfermedad autosómica recesiva que afecta las glándulas exocrinas, principalmente pulmones y páncreas. Se caracteriza por infecciones respiratorias recurrentes, insuficiencia pancreática y malabsorción.</p>
+    <p class="section-title">Genética y mutaciones</p>
+    <p>El gen <strong>CFTR</strong> codifica una proteína canal de cloro. La mutación ΔF508 (deleción de tres nucleótidos) impide el plegamiento correcto de la proteína, causando su degradación y disfunción del canal.</p>
     <div class="mutaciones">
-      <strong>Mutaciones principales:</strong>
+      <strong>Mutaciones destacadas:</strong>
       <ul>
-        <li><em>ΔF508 (GTTGGC)</em>: Deleción de tres nucleótidos, la mutación más común.</li>
-        <li><em>G542X</em>: Mutación de terminación prematura.</li>
+        <li><em>ΔF508 (GTTGGC)</em>: deleción de fenilalanina en la posición 508.</li>
+        <li><em>G542X</em>: mutación de terminación prematura que produce proteína truncada.</li>
       </ul>
     </div>
     <a class="link-info" href="https://www.cff.org/What-is-CF/About-Cystic-Fibrosis/" target="_blank" rel="noopener">Más información CF Foundation</a>
@@ -129,13 +151,16 @@
 
   <div class="patologia">
     <h3>Cáncer de Mama Hereditario (BRCA1/2)</h3>
-    <p>Mutaciones en los genes <strong>BRCA1</strong> y <strong>BRCA2</strong> aumentan significativamente el riesgo de cáncer de mama y ovario. Son detectables con tecnologías NGS.</p>
+    <p class="section-title">Descripción clínica</p>
+    <p>Los portadores de mutaciones en BRCA1 o BRCA2 presentan alto riesgo de desarrollar cáncer de mama y ovario a edades tempranas. La vigilancia y profilaxis son claves para la prevención.</p>
+    <p class="section-title">Genética y mutaciones</p>
+    <p>Las mutaciones en estos genes suelen ser deleciones, inserciones o mutaciones puntuales que afectan la reparación del ADN por recombinación homóloga, incrementando la inestabilidad genómica.</p>
     <div class="mutaciones">
-      <strong>Ejemplos de mutaciones:</strong>
+      <strong>Mutaciones frecuentes:</strong>
       <ul>
-        <li><em>185delAG</em> en BRCA1.</li>
-        <li><em>5382insC</em> en BRCA1.</li>
-        <li><em>6174delT</em> en BRCA2.</li>
+        <li><em>185delAG</em> en BRCA1: deleción de dos nucleótidos causando truncamiento.</li>
+        <li><em>5382insC</em> en BRCA1: inserción que genera proteína no funcional.</li>
+        <li><em>6174delT</em> en BRCA2: deleción común en poblaciones específicas.</li>
       </ul>
     </div>
     <a class="link-info" href="https://www.cancer.gov/types/breast/hp/breast-ovarian-genetics-pdq" target="_blank" rel="noopener">Información NCI</a>
@@ -143,31 +168,4 @@
 
   <div class="patologia">
     <h3>Distrofia Muscular de Duchenne</h3>
-    <p>Enfermedad ligada al cromosoma X causada por mutaciones en el gen <strong>DMD</strong>, que codifica la distrofina. Provoca debilidad muscular progresiva y pérdida de función motora.</p>
-    <div class="mutaciones">
-      <strong>Mutaciones características:</strong>
-      <ul>
-        <li><em>Deleciones grandes (GCTGCT)</em> en exones del gen DMD.</li>
-        <li><em>Mutaciones puntuales</em> menos comunes.</li>
-      </ul>
-    </div>
-    <a class="link-info" href="https://www.ncbi.nlm.nih.gov/books/NBK1119/" target="_blank" rel="noopener">Más información NCBI</a>
-  </div>
-
-  <div class="patologia">
-    <h3>Síndrome de X Frágil</h3>
-    <p>Trastorno neurodesarrollativo causado por la expansión excesiva de repeticiones CGG en el gen <strong>FMR1</strong>, lo que reduce la producción de la proteína FMRP.</p>
-    <div class="mutaciones">
-      <strong>Mutaciones típicas:</strong>
-      <ul>
-        <li><em>Repeticiones CGG (CAGCAGCAG...)</em> en la región 5’ UTR del gen FMR1.</li>
-        <li><em>Premutaciones</em> que pueden causar síntomas leves o riesgo para descendencia.</li>
-      </ul>
-    </div>
-    <a class="link-info" href="https://fragilex.org/what-is-fragile-x/" target="_blank" rel="noopener">Información Fundación X Frágil</a>
-  </div>
-
-</main>
-
-</body>
-</html>
+    <
