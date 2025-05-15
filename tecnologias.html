@@ -4,6 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cibertorio Genético - Tecnologías</title>
+
+<!-- Favicon -->
+<link rel="icon" href="Logo Cibertorio.png" type="image/png" />
+
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -43,6 +47,7 @@
     border: 1px solid #0b3d91;
     padding: 12px 15px;
     text-align: left;
+    vertical-align: top;
   }
   th {
     background-color: #0b3d91;
@@ -50,6 +55,25 @@
   }
   tr:nth-child(even) {
     background-color: #f0f7ff;
+  }
+  /* Explicación debajo de la tabla */
+  .explicacion {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #0b3d91;
+  }
+  .explicacion strong {
+    color: #083170;
+  }
+  /* Enlaces para fuentes */
+  a.link-info {
+    color: #1250c8;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  a.link-info:hover {
+    color: #083170;
   }
 </style>
 </head>
@@ -70,15 +94,43 @@
   <h2>Métodos de Secuenciación y Aplicaciones</h2>
   <table>
     <thead>
-      <tr><th>Metodología</th><th>Principio</th><th>Enfermedad Asociada</th></tr>
+      <tr>
+        <th>Metodología</th>
+        <th>Principio</th>
+        <th>Enfermedad Asociada</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>Sanger</td><td>Terminación con nucleótidos marcados fluorescentes</td><td>Fibrosis Quística</td></tr>
-      <tr><td>NGS (Illumina / Ion Torrent)</td><td>Lectura masiva paralela</td><td>Cáncer de mama (BRCA1/2)</td></tr>
-      <tr><td>3ra Generación (PacBio / ONT)</td><td>Lectura larga de moléculas individuales</td><td>Distrofia muscular de Duchenne</td></tr>
-      <tr><td>Métodos Híbridos</td><td>Combinación de lecturas cortas y largas</td><td>Síndrome de X Frágil</td></tr>
+      <tr>
+        <td><strong>Sanger</strong></td>
+        <td>Secuenciación mediante terminación selectiva con nucleótidos fluorescentes que permiten leer fragmentos cortos.</td>
+        <td>Fibrosis Quística</td>
+      </tr>
+      <tr>
+        <td><strong>NGS (Illumina / Ion Torrent)</strong></td>
+        <td>Secuenciación masiva paralela que permite obtener millones de fragmentos cortos simultáneamente para análisis profundo.</td>
+        <td>Cáncer de mama (mutaciones BRCA1/2)</td>
+      </tr>
+      <tr>
+        <td><strong>Tercera generación (PacBio / ONT)</strong></td>
+        <td>Lectura de moléculas largas en tiempo real, lo que facilita detectar grandes reordenamientos y mutaciones complejas.</td>
+        <td>Distrofia muscular de Duchenne</td>
+      </tr>
+      <tr>
+        <td><strong>Métodos Híbridos</strong></td>
+        <td>Combinan lecturas cortas y largas para mejorar precisión y cobertura, usadas en enfermedades con mutaciones difíciles de detectar.</td>
+        <td>Síndrome de X Frágil</td>
+      </tr>
     </tbody>
   </table>
+
+  <div class="explicacion">
+    <p><strong>Sanger:</strong> Es la técnica clásica y aún estándar para secuenciación precisa de fragmentos pequeños. Muy usada para diagnosticar mutaciones puntuales conocidas.</p>
+    <p><strong>NGS (Next-Generation Sequencing):</strong> Ha revolucionado la genética al permitir secuenciar exomas o genomas completos rápidamente. Fundamental en oncología y genética médica.</p>
+    <p><strong>Tercera generación:</strong> Técnicas como PacBio o Nanopore (ONT) leen fragmentos mucho más largos, lo que es útil para detectar duplicaciones, deleciones y repeticiones asociadas a enfermedades genéticas complejas.</p>
+    <p><strong>Métodos híbridos:</strong> La combinación de tecnologías optimiza la calidad y facilita la resolución de regiones genómicas difíciles, como las repeticiones en el Síndrome de X Frágil.</p>
+    <p>Para profundizar en estas tecnologías, puedes visitar: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6219406/" target="_blank" rel="noopener" class="link-info">Revisión NCBI sobre tecnologías de secuenciación</a>.</p>
+  </div>
 </main>
 
 </body>
