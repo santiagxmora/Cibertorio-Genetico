@@ -3,90 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="Logo Cibertorio.png" type="image/x-icon" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cibertorio Genético - Patologías Detallado</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin:0; background:#e8f0f8; color:#0b3d91;
-  }
-  header, nav {
-    background:#0b3d91; color:#fff; padding:15px 25px;
-  }
-  header h1 {
-    margin:0; font-weight:700;
-  }
-  nav {
-    display:flex; gap:15px; justify-content:center;
-  }
-  nav a {
-    color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
-    background:#1250c8;
-    transition: background 0.3s;
-  }
-  nav a:hover, nav a.active {
-    background:#083170;
-  }
-  main {
-    max-width:900px;
-    margin: 30px auto;
-    background:#fff;
-    padding:30px 25px;
-    border-radius:10px;
-    box-shadow:0 0 15px #b1c8f7;
-  }
-  h2 {
-    margin-top: 0;
-    margin-bottom: 30px;
-  }
-  .patologia {
-    margin-bottom: 40px;
-    border-left: 6px solid #0b3d91;
-    padding-left: 20px;
-  }
-  .patologia h3 {
-    margin-top: 0;
-    color: #0b3d91;
-  }
-  .section-title {
-    font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    color: #144a8f;
-  }
-  p, ul {
-    margin-top: 0;
-    margin-bottom: 15px;
-    line-height: 1.5;
-  }
-  ul {
-    padding-left: 20px;
-  }
-  .mutaciones {
-    background: #f0f7ff;
-    padding: 15px 20px;
-    border-radius: 7px;
-    margin-top: 10px;
-  }
-  .mutaciones ul {
-    margin: 0;
-  }
-  .mutaciones li {
-    margin-bottom: 8px;
-  }
-  a.link-info {
-    display: inline-block;
-    margin-top: 8px;
-    color: #1250c8;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  a.link-info:hover {
-    color: #083170;
-  }
-</style>
+  <title>Cibertorio Genético - Patologías Detallado</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Logo Cibertorio.png" type="image/png" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin:0; background:#e8f0f8; color:#0b3d91;
+    }
+    header, nav {
+      background:#0b3d91; color:#fff; padding:15px 25px;
+    }
+    header h1 {
+      margin:0; font-weight:700;
+    }
+    nav {
+      display:flex; gap:15px; justify-content:center;
+    }
+    nav a {
+      color:#fff; text-decoration:none; font-weight:600; padding:6px 14px; border-radius:5px;
+      background:#1250c8;
+      transition: background 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background:#083170;
+    }
+    main {
+      max-width:900px;
+      margin: 30px auto;
+      background:#fff;
+      padding:30px 25px;
+      border-radius:10px;
+      box-shadow:0 0 15px #b1c8f7;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .patologia {
+      margin-bottom: 40px;
+      border-left: 6px solid #0b3d91;
+      padding-left: 20px;
+    }
+    .patologia h3 {
+      margin-top: 0;
+      color: #0b3d91;
+    }
+    .section-title {
+      font-weight: 700;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      color: #144a8f;
+    }
+    p, ul {
+      margin-top: 0;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .mutaciones {
+      background: #f0f7ff;
+      padding: 15px 20px;
+      border-radius: 7px;
+      margin-top: 10px;
+    }
+    .mutaciones ul {
+      margin: 0;
+    }
+    .mutaciones li {
+      margin-bottom: 8px;
+    }
+    a.link-info {
+      display: inline-block;
+      margin-top: 8px;
+      color: #1250c8;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    a.link-info:hover {
+      color: #083170;
+    }
+  </style>
 </head>
 <body>
 
@@ -171,4 +172,37 @@
 
   <div class="patologia">
     <h3>Distrofia Muscular de Duchenne</h3>
-    <
+    <p class="section-title">Descripción clínica</p>
+    <p>Enfermedad ligada al cromosoma X causada por mutaciones en el gen <strong>DMD</strong>, que codifica la distrofina. Se manifiesta con debilidad muscular progresiva que comienza en la infancia temprana y lleva a la pérdida de la marcha y complicaciones respiratorias y cardiacas.</p>
+    <p class="section-title">Genética y mutaciones</p>
+    <p>Las deleciones grandes o mutaciones puntuales en el gen DMD causan ausencia o disfunción de la proteína distrofina, esencial para la integridad estructural de las fibras musculares.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones características:</strong>
+      <ul>
+        <li>Deleciones grandes en exones múltiples (ej. secuencias repetidas <em>GCTGCT</em>).</li>
+        <li>Mutaciones puntuales menos frecuentes.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://www.ncbi.nlm.nih.gov/books/NBK1119/" target="_blank" rel="noopener">Más información NCBI</a>
+  </div>
+
+  <div class="patologia">
+    <h3>Síndrome de X Frágil</h3>
+    <p class="section-title">Descripción clínica</p>
+    <p>Trastorno neurodesarrollativo caracterizado por discapacidad intelectual, rasgos físicos característicos y problemas conductuales. Es la causa genética más común de discapacidad intelectual hereditaria.</p>
+    <p class="section-title">Genética y mutaciones</p>
+    <p>La expansión excesiva de repeticiones CGG en el gen <strong>FMR1</strong> provoca metilación y silenciamiento del gen, reduciendo la producción de la proteína FMRP necesaria para el desarrollo neural.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones típicas:</strong>
+      <ul>
+        <li>Expansiones de repeticiones CGG (<em>CAGCAGCAG</em>) en la región 5’ UTR del gen FMR1.</li>
+        <li>Premutaciones que pueden provocar síntomas leves o riesgo para descendencia.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://fragilex.org/what-is-fragile-x/" target="_blank" rel="noopener">Información Fundación X Frágil</a>
+  </div>
+
+</main>
+
+</body>
+</html>
