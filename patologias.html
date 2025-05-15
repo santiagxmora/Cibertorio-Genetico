@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cibertorio Genético - Patologías</title>
+<title>Cibertorio Genético - Patologías Ampliado</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0; background:#e8f0f8; color:#0b3d91;
   }
-  header, nav, footer {
+  header, nav {
     background:#0b3d91; color:#fff; padding:15px 25px;
   }
   header h1 {
@@ -30,17 +30,45 @@
     max-width:900px;
     margin: 30px auto;
     background:#fff;
-    padding:25px;
+    padding:30px 25px;
     border-radius:10px;
-    box-shadow:0 0 12px #b1c8f7;
+    box-shadow:0 0 15px #b1c8f7;
   }
   h2 {
     margin-top: 0;
+    margin-bottom: 25px;
   }
   .patologia {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-left: 6px solid #0b3d91;
-    padding-left: 15px;
+    padding-left: 20px;
+  }
+  .patologia h3 {
+    margin-top: 0;
+    color: #0b3d91;
+  }
+  .mutaciones {
+    margin-top: 10px;
+    background: #f0f7ff;
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
+  .mutaciones ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .mutaciones li {
+    margin-bottom: 6px;
+  }
+  .link-info {
+    display: inline-block;
+    margin-top: 8px;
+    color: #1250c8;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .link-info:hover {
+    color: #083170;
   }
 </style>
 </head>
@@ -58,37 +86,87 @@
 </nav>
 
 <main>
-  <h2>Patologías Asociadas</h2>
+  <h2>Patologías Genéticas y Mutaciones Asociadas</h2>
 
   <div class="patologia">
     <h3>Esclerosis Lateral Amiotrófica (ELA)</h3>
-    <p>Enfermedad neurodegenerativa que afecta motoneuronas. Asociada con mutaciones en genes como <strong>SOD1</strong> que alteran la transcripción y el plegamiento proteico.</p>
+    <p>Enfermedad neurodegenerativa progresiva que afecta las neuronas motoras, causando debilidad muscular y atrofia. Algunas mutaciones en el gen <strong>SOD1</strong> están implicadas en la forma familiar de la enfermedad.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones conocidas:</strong>
+      <ul>
+        <li><em>GAGTTC</em>: Mutación común en el exón 2 del gen SOD1.</li>
+        <li><em>A4V</em>: Variante que causa inicio rápido y severo.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://www.ncbi.nlm.nih.gov/books/NBK13448/" target="_blank" rel="noopener">Más información NIH</a>
   </div>
 
   <div class="patologia">
-    <h3>Hemofilia</h3>
-    <p>Trastorno hereditario ligado al cromosoma X causado por mutaciones en los genes <strong>F8</strong> o <strong>F9</strong>, que afectan la coagulación sanguínea.</p>
+    <h3>Hemofilia A</h3>
+    <p>Trastorno hemorrágico hereditario causado por la deficiencia del factor VIII de coagulación. Generalmente ligado al cromosoma X con mutaciones en el gen <strong>F8</strong>.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones frecuentes:</strong>
+      <ul>
+        <li><em>Inversiones intrónicas</em>: mutaciones que afectan la producción del factor VIII.</li>
+        <li><em>ATGTTT</em>: Cambio puntual asociado a la forma grave.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://www.hemophilia.org/Bleeding-Disorders/Types-of-Bleeding-Disorders/Hemophilia-A" target="_blank" rel="noopener">Más información Hemofilia</a>
   </div>
 
   <div class="patologia">
     <h3>Fibrosis Quística</h3>
-    <p>Enfermedad causada por mutaciones en el gen <strong>CFTR</strong>, detectables mediante secuenciación Sanger, que generan problemas respiratorios y digestivos.</p>
+    <p>Enfermedad autosómica recesiva causada por mutaciones en el gen <strong>CFTR</strong>. Provoca disfunción en las glándulas exocrinas, afectando pulmones y sistema digestivo.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones principales:</strong>
+      <ul>
+        <li><em>ΔF508 (GTTGGC)</em>: Deleción de tres nucleótidos, la mutación más común.</li>
+        <li><em>G542X</em>: Mutación de terminación prematura.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://www.cff.org/What-is-CF/About-Cystic-Fibrosis/" target="_blank" rel="noopener">Más información CF Foundation</a>
   </div>
 
   <div class="patologia">
-    <h3>Cáncer de Mama (BRCA1/2)</h3>
-    <p>Mutaciones en genes BRCA1 y BRCA2 aumentan el riesgo de cáncer de mama hereditario, detectables mediante tecnologías NGS.</p>
+    <h3>Cáncer de Mama Hereditario (BRCA1/2)</h3>
+    <p>Mutaciones en los genes <strong>BRCA1</strong> y <strong>BRCA2</strong> aumentan significativamente el riesgo de cáncer de mama y ovario. Son detectables con tecnologías NGS.</p>
+    <div class="mutaciones">
+      <strong>Ejemplos de mutaciones:</strong>
+      <ul>
+        <li><em>185delAG</em> en BRCA1.</li>
+        <li><em>5382insC</em> en BRCA1.</li>
+        <li><em>6174delT</em> en BRCA2.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://www.cancer.gov/types/breast/hp/breast-ovarian-genetics-pdq" target="_blank" rel="noopener">Información NCI</a>
   </div>
 
   <div class="patologia">
     <h3>Distrofia Muscular de Duchenne</h3>
-    <p>Enfermedad muscular causada por deleciones en el gen <strong>DMD</strong>. Se analizan con secuenciación de tercera generación por sus grandes variaciones estructurales.</p>
+    <p>Enfermedad ligada al cromosoma X causada por mutaciones en el gen <strong>DMD</strong>, que codifica la distrofina. Provoca debilidad muscular progresiva y pérdida de función motora.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones características:</strong>
+      <ul>
+        <li><em>Deleciones grandes (GCTGCT)</em> en exones del gen DMD.</li>
+        <li><em>Mutaciones puntuales</em> menos comunes.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://www.ncbi.nlm.nih.gov/books/NBK1119/" target="_blank" rel="noopener">Más información NCBI</a>
   </div>
 
   <div class="patologia">
     <h3>Síndrome de X Frágil</h3>
-    <p>Trastorno neurodesarrollativo causado por expansiones repetidas CGG en el gen <strong>FMR1</strong>, detectables con métodos híbridos de secuenciación.</p>
+    <p>Trastorno neurodesarrollativo causado por la expansión excesiva de repeticiones CGG en el gen <strong>FMR1</strong>, lo que reduce la producción de la proteína FMRP.</p>
+    <div class="mutaciones">
+      <strong>Mutaciones típicas:</strong>
+      <ul>
+        <li><em>Repeticiones CGG (CAGCAGCAG...)</em> en la región 5’ UTR del gen FMR1.</li>
+        <li><em>Premutaciones</em> que pueden causar síntomas leves o riesgo para descendencia.</li>
+      </ul>
+    </div>
+    <a class="link-info" href="https://fragilex.org/what-is-fragile-x/" target="_blank" rel="noopener">Información Fundación X Frágil</a>
   </div>
+
 </main>
 
 </body>
